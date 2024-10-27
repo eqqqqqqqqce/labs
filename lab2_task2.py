@@ -1,3 +1,5 @@
+import math
+
 salary = 5000  # Ежемесячная зарплата
 spend = 6000  # Траты за первый месяц
 months = 10  # Количество месяцев, которое планируется протянуть без долгов
@@ -11,6 +13,6 @@ for month in range(months):
         required_capital += (current_spend - salary)
     current_spend *= (1 + increase)
 
-min_capital = round(required_capital)
+min_capital = math.ceil(required_capital)
 
 print("Подушка безопасности, чтобы протянуть 10 месяцев без долгов:", min_capital)
